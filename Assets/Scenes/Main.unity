@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 924126288}
   - component: {fileID: 924126287}
   - component: {fileID: 924126286}
+  - component: {fileID: 924126289}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -215,103 +216,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1202007344
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1202007345}
-  - component: {fileID: 1202007347}
-  - component: {fileID: 1202007346}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1202007345
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202007344}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1202007346
+--- !u!114 &924126289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202007344}
+  m_GameObject: {fileID: 924126285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2c154fbee75845b3a1084b8ab7274, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e3b2d8707ee65049b10b0423b93f5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1202007347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202007344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: def12b8df4ad689478e239a2469030ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  columns: 8
-  rows: 8
-  wallCount:
-    minimum: 5
-    maximum: 9
-  foodCount:
-    minimum: 1
-    maximum: 5
-  Exit: {fileID: 3765205750056059182, guid: 3bdc589c17bfb984a92b48318c131c59, type: 3}
-  floorTiles:
-  - {fileID: 7885874109538660391, guid: 4257c23cc15a4504a9e8e4f6f75bd627, type: 3}
-  - {fileID: 5764054111565225978, guid: f09c668f2f5244c4d891d9a694ac69e3, type: 3}
-  - {fileID: 8801536257388839785, guid: 73176c5bc86bdfe4c81342b6247a5ca6, type: 3}
-  - {fileID: 3671935677793408457, guid: 5eeeda016f2b9e0468d5610b0240af4e, type: 3}
-  - {fileID: 1443579960895182078, guid: 6b92b78e588d33847bbaacf3318be564, type: 3}
-  - {fileID: 1269009694821397008, guid: 9bda1f97d5bd5974d9e83f5a1e8086d9, type: 3}
-  - {fileID: 4407537719998180479, guid: 04956300d7a46124ca6ec97bf8134b77, type: 3}
-  - {fileID: 5970775539687772983, guid: 97a42745574cfb64a8ae5b05743ae828, type: 3}
-  wallTiles:
-  - {fileID: 5002545820507222229, guid: 6dddee793faca9640ac269727910cd31, type: 3}
-  - {fileID: 720591954301270038, guid: 85b3f451aa83b214fb3c673e0cea3a25, type: 3}
-  - {fileID: 396585441076037137, guid: e1283d7acf56aaf4bbeb22cfab7251e0, type: 3}
-  - {fileID: 7672433554996781379, guid: 0e14307f5f9af284a81ea38664fdd5f9, type: 3}
-  - {fileID: 8101049781255970464, guid: 975db03de8506a94199b4a88af244702, type: 3}
-  - {fileID: 3893676115581030299, guid: 5ef07f633935bbc40a40e06807704cf6, type: 3}
-  - {fileID: 8496979336732270774, guid: 55ac63f128b7cc24c8f62cf9384977c1, type: 3}
-  - {fileID: 4684407880233382636, guid: 8489714a9e6bc244abb7d0b4d71e8a1a, type: 3}
-  foodTiles:
-  - {fileID: 3493802048709304579, guid: d55d7f2c32d562141a7c8b75216226a1, type: 3}
-  - {fileID: 2753147059399060704, guid: 99a3b9b853d230344bffa77f9a75d809, type: 3}
-  enemyTiles:
-  - {fileID: 3922300312070332308, guid: 1a8dde49f68910f4b9f3c1d749a5048a, type: 3}
-  - {fileID: 8841056385009968434, guid: caaa18188b725c44daace96447fac1c8, type: 3}
-  outerWallTiles:
-  - {fileID: 4673510428952543963, guid: b13ed93f07429754b9a9935f4159156c, type: 3}
-  - {fileID: 8107250767608863730, guid: ceb16ef52da08a649a4008fa1f3f3cfa, type: 3}
-  - {fileID: 2355717472041828489, guid: 79d5e329d42cf6e45bb88b983a7db683, type: 3}
+  gameManager: {fileID: 1511215640435298392, guid: e9e0e26d73f6df042a2ef2d1ce95062c,
+    type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 924126288}
-  - {fileID: 1202007345}
