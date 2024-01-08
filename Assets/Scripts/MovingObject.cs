@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingObject : MonoBehaviour
+public abstract class MovingObject : MonoBehaviour
 {
     public float moveTime = 0.1f;
     public LayerMask blockingLayer;
@@ -19,14 +19,33 @@ public class MovingObject : MonoBehaviour
         inverseMoveTime = 1f / moveTime;
     }
 
+    protected bool Move(int xDir, int yDir, out RaycastHit2D hit)
+    {
+        Vector2 start = transform.position;
+        Vector2 end = start + new Vector2(xDir, yDir);
+
+        boxCollider.enabled = false;
+        hit = Physics2D.Linecast(start, end, blockingLayer);
+        boxCollider.enabled = true;
+        
+        //TODO
+        
+        //임시
+        return false;
+    }
+    
     protected IEnumerator SmoothMovement(Vector3 end)
     {
-        float sqrRemainingDistance;
+        float sqrRemainingDistance = (transform.position- end).sqrMagnitude;
+        while (sqrRemainingDistance > float.Epsilon)
+        {
+            Vector3 newPosition = Vector3.MoveTowards(rb2D.position, end, inverseMoveTime * Time.deltaTime);
+            rb2D.MovePosition(newPosition);
+            sqrRemainingDistance = (transform.position - end).sqrMagnitude;
+            yield return null;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    protected abstract void OnCantMove<T>(T component)
+        where T : Component;
 }
